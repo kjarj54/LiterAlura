@@ -9,6 +9,13 @@ public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+    private String titulo;
+    private String[] autores;
+    private String[] idiomas;
+    private String[] temas;
+    private int descargas;
+    private String tipoMedio;
+
 
     public Libro() {
 
