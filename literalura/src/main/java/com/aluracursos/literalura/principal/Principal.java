@@ -6,14 +6,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
-import com.aluracursos.literalura.model.Libros;
+import com.aluracursos.literalura.model.*;
 import com.aluracursos.literalura.respository.RepositorioLibros;
-import org.hibernate.Hibernate;
-import org.hibernate.exception.ConstraintViolationException;
+import com.aluracursos.literalura.service.ConsumirAPI;
+import com.aluracursos.literalura.service.ConversorDatos;
 import org.springframework.dao.DataIntegrityViolationException;
-
-
-import java.util.Scanner;
 
 public class Principal {
     private ConsumirAPI consultarAPI = new ConsumirAPI();
@@ -41,7 +38,7 @@ public class Principal {
 			0.- Salir del programa
 			""";
 
-    public Consultas (RepositorioLibros repoLibros) {
+    public Principal(RepositorioLibros repoLibros) {
         this.repoLibros = repoLibros;
     }
 
